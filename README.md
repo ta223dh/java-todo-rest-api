@@ -1,6 +1,7 @@
 # Java Todo REST API
 
-A simple REST service for a task board that allows users to create and manage different lists of tasks, with data persisted across devices.
+A simple REST service for a task board that allows a user to create and manage
+different lists of tasks which are persisted between devices.
 
 Please see the project board for current issues:  
 https://github.com/users/ta223dh/projects/1
