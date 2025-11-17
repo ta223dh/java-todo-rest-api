@@ -16,6 +16,8 @@ The project is based on Spring boot initializr (https://start.spring.io) with th
 
 It runs the spring application directly on the local machine, and a MySQL database in docker.
 
+The application is availble on localhost:8080, see the specific endpoints on [API overview](##API-Overview)
+
 ### Layered architecture
 
 The application uses a layered archiecture with DTO (data transfer objects) that are used towards the clients and entities for TodoLists and TodoItems that are used towards the database. 
@@ -71,7 +73,7 @@ Status legend:
 
 ## Endpoints
 
-The application is available on localhost:8080/
+The application is available on localhost:8080
 
 ### Lists
 
