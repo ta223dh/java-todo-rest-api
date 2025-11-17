@@ -16,7 +16,7 @@ The project is based on Spring boot initializr (https://start.spring.io) with th
 
 It runs the spring application directly on the local machine, and a MySQL database in docker.
 
-Start the application by following the [Developer Setup](#developer-setup) to access it locally at http://localhost:8080. See the [API overview](#api-overview). section for available endpoints.
+Start the application by following the [Developer Setup](#developer-setup) to access it locally at http://localhost:8080. See the [API overview](#api-overview) section for available endpoints.
 
 ### Layered architecture
 
