@@ -15,6 +15,16 @@ The project is based on Spring boot initializr (https://start.spring.io) with th
 
 It runs the spring application directly on the local machine, and a MySQL database in docker.
 
+### Layered architecture
+
+The application uses a layered archiecture with DTO (data transfer objects) that are used towards the clients and entities for TodoLists and TodoItems that are used towards the database. 
+
+- Client
+- Controller (DTO)
+- Service (DTO & Entity)
+- Repository (Entity)
+- Database
+
 ## Developer Setup
 
 ### Prerequisites
