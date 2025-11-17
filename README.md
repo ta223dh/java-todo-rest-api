@@ -5,7 +5,15 @@ A simple REST service for a task board that allows users to create and manage di
 Please see the project board for current issues:  
 https://github.com/users/ta223dh/projects/1
 
----
+## Project architecture
+
+The project is based on Spring boot initializr (https://start.spring.io) with the following dependencies 
+- Spring Web
+- MySQL Driver
+- Såromg Daya JPA
+- Spring Boot DevTools
+
+It runs the spring application directly on the local machine, and a MySQL database in docker.
 
 ## Developer Setup
 
@@ -51,6 +59,8 @@ Status legend:
 ---
 
 ## Endpoints
+
+The application is available on localhost:8080/
 
 ### Lists
 
