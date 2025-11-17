@@ -1,4 +1,4 @@
-# Java Todo Test API
+# Java Todo REST API
 
 A simple REST service for a task board that allows users to create and manage different lists of tasks, with data persisted across devices.
 
