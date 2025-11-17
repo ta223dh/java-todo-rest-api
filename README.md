@@ -1,23 +1,79 @@
-# Java-todo-test-api
-A simple REST service for a task board that allows a user to create and manage different lists of tasks which are persisted between devices.
+# Java Todo Test API
 
-# Please see the projects tab for current issues
-https://github.com/users/abc/projects/1
+A simple REST service for a task board that allows users to create and manage different lists of tasks, with data persisted across devices.
 
-# Developer setup
+Please see the project board for current issues:  
+https://github.com/users/ta223dh/projects/1
 
-Prerequisites:
-- JAVA 17
-- Docker
+---
 
-git clone
-configure the .env file (copy .example.env and rename to .env)
-docker compose up
+## Developer Setup
 
-run the project
-./gradlew bootRun (macOS/Linux)
-.\gradlew.bat bootRun (Windows)
+### Prerequisites
 
-run the tests
-./gradlew test (macOS/Linux)
-.\gradlew.bat test  (Windows)
+- Java 17  
+- Docker  
+
+### Configure the environment
+
+Copy the example environment file and adjust values as needed:
+
+    cp .example.env .env
+
+### Start mysql db
+
+    docker compose up
+
+### Run the application
+
+    ./gradlew bootRun      # macOS / Linux
+    .\gradlew.bat bootRun  # Windows
+
+### Run the tests
+
+    ./gradlew test         # macOS / Linux
+    .\gradlew.bat test     # Windows
+
+---
+
+## API Overview
+
+Base path:
+
+- `/api` (implemented)
+
+Status legend:
+
+- `[✓]` Implemented  
+- `[~]` In progress  
+- `[✗]` Not implemented  
+
+---
+
+## Endpoints
+
+### Lists
+
+Base resource: `/api/lists`
+
+| Method | Endpoint       | Status        | Notes            |
+|--------|----------------|---------------|------------------|
+| GET    | /lists         | [~] In progress | List all lists   |
+| POST   | /lists         | [✗] Not implemented | Create a list |
+| PATCH  | /lists/{id}    | [✗] Not implemented | Update a list |
+| DELETE | /lists/{id}    | [✗] Not implemented | Delete a list |
+
+### Items
+
+Base resource: `/api/items`
+
+| Method | Endpoint       | Status            | Notes              |
+|--------|----------------|-------------------|--------------------|
+| GET    | /items         | [✗] Not implemented | List all items  |
+| POST   | /items         | [✗] Not implemented | Create an item  |
+| PATCH  | /items/{id}    | [✗] Not implemented | Update an item  |
+| DELETE | /items/{id}    | [✗] Not implemented | Delete an item  |
+
+---
+
+Readme generated with ChatGPT.
