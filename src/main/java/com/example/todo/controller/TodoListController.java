@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import com.example.todo.service.TodoListService;
+import com.example.todo.dto.TodoListDto;
 
 @RestController
 public class TodoListController {
@@ -16,7 +17,7 @@ public class TodoListController {
   }
 
   @RequestMapping("api/lists")
-  public List<?> getAllLists() {
+  public List<TodoListDto> getAllLists() {
     return todoListService.getAllLists();
   }
 }
