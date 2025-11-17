@@ -8,6 +8,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import static com.example.todo.common.Messages.WELCOME_MESSAGE;
+
 @WebMvcTest(RootController.class)
 public class RootControllerTest {
   @Autowired
@@ -17,6 +19,6 @@ public class RootControllerTest {
   void shouldReturnWelcomeMessage() throws Exception {
     mockMvc.perform(get("/api"))
       .andExpect(status().isOk())
-      .andExpect(content().string("Welcome to the Todo REST API"));
+      .andExpect(content().string(WELCOME_MESSAGE));
   }
 }
