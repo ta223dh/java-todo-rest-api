@@ -10,7 +10,7 @@ https://github.com/users/ta223dh/projects/1
 The project is based on Spring boot initializr (https://start.spring.io) with the following dependencies 
 - Spring Web
 - MySQL Driver
-- Såromg Daya JPA
+- Spring Data JPA
 - Spring Boot DevTools
 
 It runs the spring application directly on the local machine, and a MySQL database in docker.
