@@ -3,8 +3,9 @@ package com.example.todo.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import com.example.todo.dto.TodoListDto;
 
+import com.example.todo.dto.TodoListDto;
+import com.example.todo.entity.TodoList;
 import com.example.todo.repository.TodoListRepository;
 
 @Service
@@ -22,5 +23,11 @@ public class TodoListService {
         .stream()
         .map(entity -> new TodoListDto(entity.getId(), entity.getName()))
         .toList();
+  }
+
+  public TodoListDto createList(TodoListDto dto) {
+    var entity = new TodoList(dto.name());
+    var savedEntity = todoListRepository.save(entity);
+    return new TodoListDto(savedEntity.getId(), savedEntity.getName());
   }
 }

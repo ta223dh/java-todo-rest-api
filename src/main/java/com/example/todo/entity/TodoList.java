@@ -31,6 +31,10 @@ public class TodoList {
     /* Constructor */
     public TodoList() {}
 
+    public TodoList(String name) {
+        this.name = name;
+    }
+
     /* Getters and Setters */
     public Long getId() {
         return id;
@@ -42,23 +46,5 @@ public class TodoList {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<TodoItem> getItems() {
-        return items;
-    }
-
-    public void setItems(List<TodoItem> items) {
-        this.items = items;
-    }
-
-    public void addItem(TodoItem item) {
-        items.add(item);
-        item.setTodoList(this);
-    }
-
-    public void removeItem(TodoItem item) {
-        items.remove(item);
-        item.setTodoList(null);
     }
 }

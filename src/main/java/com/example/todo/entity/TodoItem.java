@@ -16,44 +16,10 @@ public class TodoItem {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonBackReference 
     private TodoList todoList;
-
-    private String title;
-    private String message;
 
     /* Constructor */
     public TodoItem() {}
 
-    public Long getListId() {
-        return id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public TodoList getTodoList() {
-        return todoList;
-    }
-
-    public void setTodoList(TodoList todoList) {
-        this.todoList = todoList;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    /* Getters and Setters */
 }
