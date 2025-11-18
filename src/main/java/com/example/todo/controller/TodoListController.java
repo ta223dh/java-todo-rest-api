@@ -11,7 +11,8 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 import com.example.todo.service.TodoListService;
-import com.example.todo.dto.TodoListDto;
+import com.example.todo.dto.TodoListRequest;
+import com.example.todo.dto.TodoListResponse;
 
 @RestController
 public class TodoListController {
@@ -23,13 +24,13 @@ public class TodoListController {
   }
 
   @GetMapping("api/lists")
-  public List<TodoListDto> getAllLists() {
+  public List<TodoListResponse> getAllLists() {
     return todoListService.getAllLists();
   }
 
   @PostMapping("api/lists")
   @ResponseStatus(HttpStatus.CREATED)
-  public TodoListDto createList(@RequestBody @Valid TodoListDto todoListDto) {
-    return todoListService.createList(todoListDto);
+  public TodoListResponse createList(@RequestBody @Valid TodoListRequest dto) {
+    return todoListService.createList(dto);
   }
 }

@@ -11,7 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-import com.example.todo.dto.TodoListDto;
+import com.example.todo.dto.TodoListResponse;
 import com.example.todo.service.TodoListService;
 
 import java.util.List;
@@ -37,8 +37,8 @@ public class TodoListControllerTest {
   void shouldReturnTodoLists_whenTodoListsExist() throws Exception {
 
     when(todoListService.getAllLists()).thenReturn(List.of(
-        new TodoListDto(1, "My first todo list"),
-        new TodoListDto(2, "My second todo list")  
+        new TodoListResponse(1, "My first todo list"),
+        new TodoListResponse(2, "My second todo list")  
     ));
 
     mockMvc.perform(get("/api/lists"))

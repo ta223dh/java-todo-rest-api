@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.todo.dto.TodoListDto;
+import com.example.todo.dto.TodoListRequest;
+import com.example.todo.dto.TodoListResponse;
 import com.example.todo.entity.TodoList;
 import com.example.todo.repository.TodoListRepository;
 
@@ -17,17 +18,17 @@ public class TodoListService {
     this.todoListRepository = todoListRepository;
   }
 
-  public List<TodoListDto> getAllLists() {
+  public List<TodoListResponse> getAllLists() {
 
     return this.todoListRepository.findAll()
         .stream()
-        .map(entity -> new TodoListDto(entity.getId(), entity.getName()))
+        .map(entity -> new TodoListResponse(entity.getId(), entity.getName()))
         .toList();
   }
 
-  public TodoListDto createList(TodoListDto dto) {
+  public TodoListResponse createList(TodoListRequest dto) {
     var entity = new TodoList(dto.name());
     var savedEntity = todoListRepository.save(entity);
-    return new TodoListDto(savedEntity.getId(), savedEntity.getName());
+    return new TodoListResponse(savedEntity.getId(), savedEntity.getName());
   }
 }
