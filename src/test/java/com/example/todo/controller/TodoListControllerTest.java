@@ -54,12 +54,9 @@ public class TodoListControllerTest {
   @Test
   void shouldReturnCreatedTDO_whenPostingNewTodoList() throws Exception {
     final String TODO_LIST_NAME = "My new todo list";
-    var requestBody = """
-      {
-        "name": "%s"
-      }
-      """.formatted(TODO_LIST_NAME);
 
+    final String requestBody = "{\"name\": \"" + TODO_LIST_NAME + "\"}";
+    
     when(todoListService.createList(new TodoListRequest(TODO_LIST_NAME)))
       .thenReturn(new TodoListResponse(1, TODO_LIST_NAME));
 
@@ -75,7 +72,7 @@ public class TodoListControllerTest {
 
   @Test
   void shouldReturnBadRequest_whenPostingNewTodoListWithEmptyName() throws Exception {
-    var requestBody = """
+    String requestBody = """
       {
         "name": ""
       }
